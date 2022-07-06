@@ -1,1 +1,1 @@
-This is the low-level C programming repository
+This Directory is the low-level C programming repository
