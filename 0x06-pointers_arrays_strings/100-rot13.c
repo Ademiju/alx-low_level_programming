@@ -8,17 +8,18 @@
 char *rot13(char *s)
 {
 int i, j;
-char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-
+char alpha[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char r[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+char boolean;
 for( i = 0; s[i] != '\0'; i++)
 {
-for (j = 0; a[j] != '\0'; j++)
+boolean = 0;	
+for (j = 0; alpha[j] != '\0' && boolean == 0; j++)
 {
-													if (s[i] == a[j])
+													if (s[i] == alpha[j])
 {
-													s[i] = b[j];
-													break;
+													s[i] = r[j];
+boolean = 1;
 													}
 													}
 }
