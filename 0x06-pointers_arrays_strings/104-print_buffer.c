@@ -16,31 +16,31 @@ else
 {
 for (i = 0; i < size; i += 10)
 {
-													printf("%08x: ", i);
-													j = 0;
-													while (j < 10)
-													{
-													if (j % 2 == 0 && j != 0)
-																										printf(" ");
-													if ((j + i) > size - 1)
-																																							{
-													printf("  ");
-																																							}
-													else
-													printf("%.2x", b[i + j]);
-																																							j++;
-																										}
-													printf(" ");
-																										j = 0;
-																										while (j < 10)																									{
+printf("%08x: ", i);
+j = 0;
+while (j < 10)
+{
+if (j % 2 == 0 && j != 0)
+printf(" ");
+if ((j + i) > size - 1)
+{
+printf("  ");
+}
+else
+printf("%.2x", b[i + j]);
+j++;
+}
+printf(" ");
+j = 0;
+while (j < 10)												{
 if ((j + i) > size - 1)
 break;
 if (b[j + i] <= 31 || b[j + 1] >= '~')
 b[j + i] = '.';
 putchar(b[j + i]);
-													j++;
-													}
-													printf("\n");
-													}
+j++;
+}
+printf("\n");
+}
 }
 }
