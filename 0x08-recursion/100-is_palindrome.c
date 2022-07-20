@@ -21,7 +21,7 @@ int is_palind_recursive(char *s, int i, int j)
 {
 if (i == j)
 return (1);
-f (i == j - 1)
+if (i == j - 1)
 return (s[i] == s[j]);
 if (s[i] != s[j])
 return (0);
