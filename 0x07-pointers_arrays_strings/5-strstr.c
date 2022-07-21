@@ -15,7 +15,7 @@ while (*h)
 {
 n = needle;
 h = haystack;
-													while (*n)
+while (*n)
 {
 if (*h == *n)
 {

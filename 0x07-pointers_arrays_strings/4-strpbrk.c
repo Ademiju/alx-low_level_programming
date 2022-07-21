@@ -19,8 +19,8 @@ for (i = 0; accept[i]; i++)
 {
 if (accept[i] == *s)
 {
-													return (s);
-													}
+return (s);
+}
 }
 s++;
 }
